@@ -6,32 +6,9 @@
 
     <h1>Add Student</h1>
 
-        <form method="POST">
+        <form action="/" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            
-            <label>Admission Number: </label>
-            {{ form.admission_number }}<br><br>
-
-            <label>Student Name : </label>
-            {{ form.name }}<br><br>
-
-            <label>Email : </label>
-            {{ form.email }}<br><br>
-
-            <label>Age : </label>
-            {{ form.age }}<br><br>
-
-            <label>class : </label>
-            {{ form.class_level}}<br><br>
-
-            <label>Description : </label>
-            {{ form.description }}<br><br>
-
-            <label>Image : </label>
-            {{ form.image}}<br><br>
-
-            <label>File : </label>
-            {{ form.marklist}}<br><br>
+            {{form.as_p}}
 
 
             <input type="submit" value="submit">
